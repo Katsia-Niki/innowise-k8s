@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: epic-user-service
+  namespace: inno
+spec:
+  selector:
+    app: epic-user-service
+  ports:
+    - port: 8080
+      targetPort: 8080

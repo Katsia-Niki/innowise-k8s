@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: inno
+data:
+  SPRING_PROFILES_ACTIVE: "docker"
+  USER_SERVICE_URL: "http://epic-user-service:8080"
+  AUTH_SERVICE_URI: "http://epic-auth-service:8080"
+  USER_SERVICE_URI: "http://epic-user-service:8080"
+  ORDER_SERVICE_URI: "http://epic-order-service:8082"
+  PAYMENT_SERVICE_URI: "http://epic-payment-service:8084"
+  DB_URL: "jdbc:postgresql://epic-order-postgres:5432/epic_order_service"
+  REDIS_HOST: "redis"
+  REDIS_PORT: "6379"
+  SPRING_KAFKA_BOOTSTRAP_SERVERS: "kafka:9092"
+  SPRING_MONGODB_URI: "mongodb://epic-payment-mongo:27017/epic_payment_service"
